@@ -1,0 +1,19 @@
+language: java
+install: true
+
+jdk:
+- oraclejdk11
+
+script:
+- ./gradlew build --scan -s
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: "SHaHMmuetYEQwSNZS/gUGI7g6WrcFPIuDhjVfYVPqVxNnXu7VnlXCIZzZGI9g5MuGV4tkq8fTpEEaeqIVfNdp7cYUKJuHBTuc1iUETbI77HCBbeOQn/5tShXQOfBt47erfmSHOvEck8qtjxqDgC2l1nxEG4Dp+pTouQAsNZrza4S+lTVquv0VCdW1HeV1JlTQQj4bYqKT1csN5No4UHCrfmD8SoTdS/IWXxaeTXOGb86z2+MRjcRMu+iNP4EGxs++jaF+Gj/bDUWPFuBGAqEU68TwvGgbMP+3klgMQo9IneMnyFKZfsQeqigVK2YNfV2eJrTXGXkGrOQv0d+bKC2U4nOgf/dY5mc0s0H/n8WNlHIa/szxQ5EWM2R04hbeOjEt5TrnroHtQF8CHBGEJH7PQQWel+QA1kHBtjWMeqPGVpis6WwWKV8perxN1lGM+M86qKqw1S/igbR30uoCINoeNNwppDUbjyAUllalPkO2cCzEJZCk4jV6WfrawJSoHus2fRq2T6ZYS+tYiRxaM9sqV8vl/f87+rhk6C0q/VYCK6D6OX/ZUBfB7A9H0IosjLyXrtI91OkgxBzF0bIWBGqOuqBqKW0u70W8onYQhj+eQRMLkE6aurOve1na8SOB+1Gg9vtV1nGJBU/MsjyRGla/SvwKI+0KwZZB9tKgG99CHQ="
+  secret_access_key:
+    secure: "Zc/l66QY3dxwzu+cF3r3uZ1mUMrd2+GizfKgVTUxBBNaGbY0l2/cCBXaHfB3edmiobni2ZBOr2LNq1OJ4OaMzinat3h2P2RQVrJWId+bNe53t8giKol4XGCIoJa9JhnTSjfk1RlYcbgHG7hy03LLtFKX90hmL2Uil6cTD65QglkD6aVpWMFLG/BwnxWjYGae3A27wW+/8Qt6gbQ6mbeio7e59JtZLKISXVpX/msuH2xC+dg2ZIQURNjeZpbD0Fr+oxMSZc9nYNlI9T2eZd9KuERNhHvD0p/oKkwX9/4eRV8jo9rt2gEnotzrnwGOnwo+ApNajAkF02wLvxQ5E+RU5dQvHrlh5qoNtkZqPp5ghAmzYhoPnzYSYDys8vwCs68bpKAfLWygTzaY7qXi9onLYbeh7Sqg/3PZpFMT+OjJd4jb9s2BqMUE4lnBlRn9+0emplatJJHfBGuBRasuOGu9XOP/1EEByvihXiGmNfxQqXSQ+jpVC7Fumwm+UxjJE9Aa0xk/KStcxSdjqTB7zHIGZltS3OBDuZCIInXuD2uimC5DrFbK4tO9vydafy/Ht2mzpf0ysfQ7us6gUyXgpK8DMrUe7zOGxwXbcUZ4LwmN+oA60wDBU6ywS2RzLqv4xrNdua7lJg1KLIRFiF2vRLT8jh7W7Hbvs7+xU43vnGV4Ixg="
+  region: "eu-west-1"
+  app: "quarkus-lab"
+  env: "quarkus-lab-environment"
+  bucket_name: "ci-deploy-bucket"
