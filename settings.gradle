@@ -12,5 +12,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'microprofile-demo'
+rootProject.name = 'quarkus-lab'
 
