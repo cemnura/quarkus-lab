@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/cemnura/quarkus-lab.svg?branch=master)](https://travis-ci.org/cemnura/quarkus-lab)
+[![Build Status](https://travis-ci.org/cemnura/quarkus-lab.svg?branch=master)](https://travis-ci.org/cemnura/quarkus-lab) [![codecov](https://codecov.io/gh/cemnura/quarkus-lab/branch/master/graph/badge.svg)](https://codecov.io/gh/cemnura/quarkus-lab)
