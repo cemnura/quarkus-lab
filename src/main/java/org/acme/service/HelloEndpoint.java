@@ -12,6 +12,6 @@ public class HelloEndpoint {
     @Path("/hello")
     public String hello()
     {
-        return "Hello!!!";
+        return "Zello!!!";
     }
 }
