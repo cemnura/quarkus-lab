@@ -1,14 +1,14 @@
 language: java
 jdk:
-- oraclejdk8
+- oraclejdk11
 cache:
   directories:
   - .autoconf
   - $HOME/.m2
-script: "./mvnw package"
+script: "gradlew.bat quarkusBuild --uber-jar"
 deploy:
   provider: elasticbeanstalk
-  zip_file: 'target/quarkus-lab-1.0-SNAPSHOT-runner.jar'
+  zip_file: 'build/quarkus-lab-runner.jar'
   access_key_id: $ACCESSKEYID
   secret_access_key: $ACCESSKEYSECRET
   region: eu-west-1
