@@ -3,8 +3,8 @@ plugins {
     id 'io.quarkus' version '0.18.0'
 }
 
-sourceCompatibility = 11
-targetCompatibility = 11
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 
 repositories {
