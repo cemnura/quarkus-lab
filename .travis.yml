@@ -5,7 +5,9 @@ cache:
   directories:
   - .autoconf
   - $HOME/.m2
-script: "./gradlew quarkusBuild --uber-jar"
+script: 
+- "./gradlew test"
+- "./gradlew quarkusBuild --uber-jar"
 deploy:
   provider: elasticbeanstalk
   zip_file: 'build/quarkus-lab-runner.jar'
